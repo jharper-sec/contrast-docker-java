@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - "GIT_COMMIT=${GIT_COMMIT}"
+      - "BUILD_NUMBER=${BUILD_NUMBER}"
+      - "GIT_BRANCH=${GIT_BRANCH}"
